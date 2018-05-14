@@ -13,7 +13,7 @@ void Preorder(node* sr);//전위 순위 운행
 void Inorder(node* sr);//중위 순위 운행
 void Postorder(node* sr);//후위 순위 운행
 void delete_node(node** root, int key);
-
+//test
 void main() {
 	node* tree = NULL;
 	addData(&tree, 10);
