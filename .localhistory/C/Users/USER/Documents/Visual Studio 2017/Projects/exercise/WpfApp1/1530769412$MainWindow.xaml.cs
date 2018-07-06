@@ -14,7 +14,6 @@ using System.Windows.Shapes;
 
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
-using System.Diagnostics;
 
 namespace WpfApp1
 {
@@ -45,23 +44,6 @@ namespace WpfApp1
             if (progressBar.Value >= progressBar.Maximum)
             {
                 EndTheGame();
-            }
-            string test = null;
-            
-            try
-            {
-                //TestFunction();
-            }
-            catch (Exception ex)
-            {
-                StackTrace st = new StackTrace(ex, true);
-                StackFrame[] frames = st.GetFrames();
-
-                // Iterate over the frames extracting the information you need
-                foreach (StackFrame frame in frames)
-                {
-                    Console.WriteLine("{0}:{1}({2},{3})", frame.GetFileName(), frame.GetMethod().Name, frame.GetFileLineNumber(), frame.GetFileColumnNumber());
-                }
             }
         }
 
